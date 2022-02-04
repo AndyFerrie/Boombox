@@ -1,15 +1,15 @@
 /* Orange colour: #FE4F00 */
 
-div {
+/* div {  
     border: 1px solid red;
-}
+} */
 
 body {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    /* background-color: #FE4F00; */
+    background-color: #FE4F00; */
 }
 
 .boombox {
@@ -27,7 +27,7 @@ body {
     width: 60%;
     display: flex;
     justify-content: center;
-    /* background-color: #FE4F00; */
+    background-color: #FE4F00;
 }
 
 .top .left, .top .right {
@@ -99,13 +99,111 @@ body {
     height: 50%;
 }
 
-
-
 /* Middle Section */
 
 .middle {
     height: 30%;
     width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.middle .centre {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #FE4F00;
+}
+
+.middle .left, .middle .right {
+    width: 20%;
+    display: flex;
+    background-color: #FE4F00;
+}
+
+.middle .left .circle, .middle .right .circle {
+    height: 90%;
+    width: 90%;
+    border-radius: 50%;
+    margin: auto;
+    display: flex;
+    background-color: white;
+}
+
+.middle .left .innercircle, .middle .right .innercircle {
+    height: 90%;
+    width: 90%;
+    border-radius: 50%;
+    margin: auto;
+    background-color: black;
+}
+
+.middle .radio {
+    width: 100%;
+    height: 40%;
+    display: flex;
+    background-color: black;
+    position: relative;
+}
+
+.middle .radio .middle {
+    height: 30%;
+    width: 75%;
+    margin: auto;
+    background-color: white;
+}
+
+.middle .radio .line {
+    height: 100%;
+    width: 0.25%;
+    position: absolute;
+    margin-left: 20%;
+    background-color: #FE4F00;
+}
+
+.middle .equaliser {
+    width: 40%;
+    height: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-color: black;
+} 
+
+.middle .bars {
+    width: 8.5%;
+    height: 86%;
+    margin: 0 2%;
+    background-color: #FE4F00;
+    align-self: flex-end;
+}
+
+.middle .bars.one, .middle .bars.seven {
+    height: 66%;
+}
+
+.middle .bars.three {
+    height: 46%;
+}
+
+.middle .bars.four {
+    height: 66%;
+}
+
+.middle .overlay {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.middle .level {
+    border: 1px solid black;
 }
 
 /* Bottom Section */
