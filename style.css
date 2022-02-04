@@ -1,3 +1,5 @@
+/* Orange colour: #FE4F00 */
+
 div {
     border: 1px solid red;
 }
@@ -7,6 +9,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
+    /* background-color: #FE4F00; */
 }
 
 .boombox {
@@ -17,27 +20,95 @@ body {
     align-items: center;
 }
 
+/* Top section - Handle and Buttons */
+
 .top {
     height: 20%;
     width: 60%;
     display: flex;
     justify-content: center;
+    /* background-color: #FE4F00; */
 }
 
 .top .left, .top .right {
     height: 100%;
     width: 3%;
+    background-color: #FE4F00;
+    display: flex;
+    flex-direction: column;
+}
+
+.top .left .one, .top .right .one {
+    height: 7%;
+}
+
+.top .left .two, .top .right .two {
+    height: 6%;
+    background-color: white;
+}
+
+.top .left .three {
+    height: 60%;
+    display: flex;
+}
+
+.top .left .three .left {
+    width: 60%;
+    background-color: white;
+}
+
+.top .right .three {
+    height: 60%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.top .right .three .right {
+    width: 60%;
+    background-color: white;
 }
 
 .top .centre {
     height: 100%;
     width: 94%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
+
+.top .centre .handle {
+    height: 20%;
+    background-color: black;
+}
+
+.top .centre .buttons {
+    height: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+}
+
+.top .centre .buttons .button {
+    height: 100%;
+    width: 8%;
+    margin: 0 2%;
+    background-color: black;
+}
+
+.top .centre .buttons .pressed {
+    height: 50%;
+}
+
+
+
+/* Middle Section */
 
 .middle {
     height: 30%;
     width: 100%;
 }
+
+/* Bottom Section */
 
 .bottom {
     height: 50%;
