@@ -8,7 +8,9 @@
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <h1>&lt;div&gt;Boombox&lt;/div&gt;</h1>
+    <div class="musicinfo">
+        <h4 id="title" class="animate"></h4>
+    </div>
 
     <div class="boombox">
 
@@ -53,23 +55,25 @@
 
             <div class="left">
                 <div class="circle">
-                    <div class="innercircle"></div>
+                    <div class="innercircle animate"></div>
                 </div>
             </div>
 
             <div class="centre">
                 <div class="radio">
-                    <div class="middle"></div>
+                    <div class="middle" id="progressContainer">
+                        <div id="progress"></div>
+                    </div>
                     <div class="line"></div>
                 </div>
                 <div class="equaliser">
-                    <div class="bars one"></div>
-                    <div class="bars two"></div>
-                    <div class="bars three"></div>
-                    <div class="bars four"></div>
-                    <div class="bars five"></div>
-                    <div class="bars six"></div>
-                    <div class="bars seven"></div>
+                    <div class="bars one animate"></div>
+                    <div class="bars two animate"></div>
+                    <div class="bars three animate"></div>
+                    <div class="bars four animate"></div>
+                    <div class="bars five animate"></div>
+                    <div class="bars six animate"></div>
+                    <div class="bars seven animate"></div>
                     <div class="overlay">
                         <div class="level"></div>
                         <div class="level"></div>
@@ -87,7 +91,7 @@
 
             <div class="right">
                 <div class="circle">
-                    <div class="innercircle"></div>
+                    <div class="innercircle animate"></div>
                 </div>
             </div>
 
@@ -99,7 +103,7 @@
 
             <div class="left">
                 <div class="circle">
-                    <div class="innercircle"></div>
+                    <div class="innercircle animate"></div>
                 </div>
                 <div class="littlecircle top">
                     <div class="screw"></div>
@@ -138,7 +142,7 @@
 
                     <div class="middle">
                         <div class="reel">
-                            <i class="fas fa-cog"></i>
+                            <i class="fas fa-cog animate"></i>
                         </div>
 
                         <div class="window">
@@ -146,7 +150,7 @@
                         </div>
 
                         <div class="reel">
-                            <i class="fas fa-cog"></i>
+                            <i class="fas fa-cog animate"></i>
                         </div>
                     </div>   
 
@@ -156,19 +160,19 @@
                 </div>
 
                 <div class="bottom player">
-                    <div class="button">
+                    <div id="rewind" class="button">
                         <i class="fas fa-fast-backward"></i>
                     </div>
-                    <div class="button">
+                    <div id="play" class="button animate">
                         <i class="fas fa-play"></i>
                     </div>
-                    <div class="button">
+                    <div id="fastforward" class="button">
                         <i class="fas fa-fast-forward"></i>
                     </div>
-                    <div class="button">
+                    <div id = "stop" class="button">
                         <i class="fas fa-stop"></i>
                     </div>
-                    <div class="button">
+                    <div id = "pause" class="button">
                         <i class="fas fa-pause"></i>
                     </div>
                 </div>
@@ -177,7 +181,7 @@
 
             <div class="right">
                 <div class="circle">
-                    <div class="innercircle"></div>
+                    <div class="innercircle animate"></div>
                 </div>
                 <div class="littlecircle top">
                     <div class="screw"></div>
@@ -190,7 +194,9 @@
         </div>
 
     </div>
-    
+    <audio id="audio" src="./music/Adam F - Circles (Album Edit).mp3"></audio>
+
     <script src="https://kit.fontawesome.com/7666c259de.js" crossorigin="anonymous"></script>
+    <script src="./script.js"></script>
 </body>
 </html>
