@@ -32,7 +32,7 @@ Desktop:
 
 Mobile: 
 
-![Mobile](./screenshotMobile.png)
+<img src="./screenshotMobile.png" width="400">
 
 ### Links
 
