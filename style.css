@@ -1,19 +1,23 @@
 /* Orange colour: #FE4F00 */
 
-/* div {  
-    border: 1px solid red;
-} */
-
 body {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #FE4F00; */
+    background-color: #FE4F00;
+    flex-direction: column;
+}
+
+h1 {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    margin-bottom: 5%;
+    font-size: 3rem;
 }
 
 .boombox {
     height: 500px;
+    min-height: 500px;
     width: 750px;
     display: flex;
     flex-direction: column;
@@ -27,13 +31,11 @@ body {
     width: 60%;
     display: flex;
     justify-content: center;
-    background-color: #FE4F00;
 }
 
 .top .left, .top .right {
     height: 100%;
     width: 3%;
-    background-color: #FE4F00;
     display: flex;
     flex-direction: column;
 }
@@ -76,26 +78,26 @@ body {
     justify-content: space-between;
 }
 
-.top .centre .handle {
+.handle {
     height: 20%;
     background-color: black;
 }
 
-.top .centre .buttons {
+.buttons {
     height: 10%;
     display: flex;
     justify-content: center;
     align-items: baseline;
 }
 
-.top .centre .buttons .button {
+.buttons .button {
     height: 100%;
     width: 8%;
     margin: 0 2%;
     background-color: black;
 }
 
-.top .centre .buttons .pressed {
+.buttons .pressed {
     height: 50%;
 }
 
@@ -114,33 +116,15 @@ body {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    background-color: #FE4F00;
 }
 
 .middle .left, .middle .right {
     width: 20%;
+    height: 100%;
     display: flex;
-    background-color: #FE4F00;
 }
 
-.middle .left .circle, .middle .right .circle {
-    height: 90%;
-    width: 90%;
-    border-radius: 50%;
-    margin: auto;
-    display: flex;
-    background-color: white;
-}
-
-.middle .left .innercircle, .middle .right .innercircle {
-    height: 90%;
-    width: 90%;
-    border-radius: 50%;
-    margin: auto;
-    background-color: black;
-}
-
-.middle .radio {
+.radio {
     width: 100%;
     height: 40%;
     display: flex;
@@ -148,14 +132,14 @@ body {
     position: relative;
 }
 
-.middle .radio .middle {
+.radio .middle {
     height: 30%;
     width: 75%;
     margin: auto;
     background-color: white;
 }
 
-.middle .radio .line {
+.radio .line {
     height: 100%;
     width: 0.25%;
     position: absolute;
@@ -163,7 +147,7 @@ body {
     background-color: #FE4F00;
 }
 
-.middle .equaliser {
+.equaliser {
     width: 40%;
     height: 40%;
     display: flex;
@@ -173,7 +157,7 @@ body {
     background-color: black;
 } 
 
-.middle .bars {
+.bars {
     width: 8.5%;
     height: 86%;
     margin: 0 2%;
@@ -181,19 +165,19 @@ body {
     align-self: flex-end;
 }
 
-.middle .bars.one, .middle .bars.seven {
+.bars.one, .bars.seven {
     height: 66%;
 }
 
-.middle .bars.three {
+.bars.three {
     height: 46%;
 }
 
-.middle .bars.four {
+.bars.four {
     height: 66%;
 }
 
-.middle .overlay {
+.overlay {
     position: absolute;
     height: 100%;
     width: 100%;
@@ -202,13 +186,184 @@ body {
     justify-content: space-between;
 }
 
-.middle .level {
+.level {
     border: 1px solid black;
+    background-color: black;
 }
 
 /* Bottom Section */
 
-.bottom {
+.main {
     height: 50%;
     width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.main .left, .main .right {
+    height: 100%;
+    width: 33%;
+    display: flex;
+    position: relative;
+}
+
+.main .centre {
+    width: 34%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main .centre .top {
+    width: 100%;
+    height: 25%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.knob {
+    width: 25%;
+    display: flex;
+}
+
+.knob .circle {
+    height: 50%;
+    width: 50%;
+}
+
+.knob .innercircle {
+    height: 20%;
+    width: 10%;
+    margin-bottom: 70%;
+}
+
+.cassette {
+    height: 36%;
+    width: 64%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    background-color: white;
+}
+
+.cassette .middle {
+    height: 28%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.cassette .window {
+    height: 90%;
+    width: 20%;
+    background-color: black;
+}
+
+.cassette .reel {
+    width: 15%;
+    margin: 0 12.5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    border-radius: 50%;
+}
+
+.cassette .reel i {
+    font-size: 100%;
+    color: white;
+}
+
+/* https://bennettfeely.com/clippy/ used to make trapezoid */
+
+.cassette .trapezoid {
+    height: 15%;
+    width: 45%;
+    margin-top: 15%;
+    clip-path: polygon(10% 0%, 90% 0%, 100% 100%, 0% 100%);
+    background-color: #FE4F00;
+}
+
+.main .centre .bottom {
+    height: 16%;
+    width: 64%;
+    margin-top: 10%;
+    background-color: black;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.main .centre .bottom .button {
+    width: 15%;
+    height: 60%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Speakers */
+
+.middle .circle {
+    margin-top: 20%;
+    height: 75%;
+    width: 75%;
+}
+
+.middle .circle .innercircle {
+    height: 85%;
+    width: 85%;
+}
+
+.middle .right .circle {
+    margin-right: 0%;
+}
+
+.middle .left .circle {
+    margin-left: 0%;
+}
+
+.circle {
+    height: 90%;
+    width: 90%;
+    border-radius: 50%;
+    margin: auto;
+    display: flex;
+    background-color: white;
+}
+
+.innercircle {
+    height: 90%;
+    width: 90%;
+    border-radius: 50%;
+    margin: auto;
+    background-color: black;
+}
+
+.main .littlecircle {
+    position: absolute;
+    background-color: white;
+    width: 14%;
+    height: 14%;
+    border-radius: 50%;
+    display: flex;
+    margin-left: 2.5%;
+}
+
+.main .right .littlecircle {
+    margin-left: 83.5%;
+}
+
+.main .littlecircle.top {
+    margin-top: 16%;
+}
+
+.main .littlecircle.bottom {
+    margin-top: 69%;
+}
+
+.main .littlecircle .innercircle {
+    height: 50%;
+    width: 50%;
 }
