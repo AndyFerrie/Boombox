@@ -19,9 +19,49 @@ h1 {
     height: 500px;
     min-height: 500px;
     width: 750px;
+    min-width: 
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+@media only screen and (max-width: 500px) {
+    .boombox {
+        height: 250px;
+        min-height: 250px;
+        width: 375px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .cassette {
+        height: 50%;
+        width: 80%;
+        margin-top: 10%;
+    }
+
+    .cassette .middle {
+        height: 40%;
+    }
+
+    .cassette .reel {
+        width: 30%;
+        margin: 0 10%;
+    }
+
+    .cassette .reel i.fas.fa-cog {
+        font-size: 60%;
+    }
+
+    .main .centre .bottom.player {
+        height: 10%;
+        width: 70%;
+        margin-top: 40%;
+        position: absolute;
+        min-width: 270px;
+    }
 }
 
 /* Top section - Handle and Buttons */
