@@ -182,12 +182,14 @@ h4 {
     background-color: white;
     display: flex;
     justify-content: flex-start;
+    cursor: pointer;
 }
 
 .middle #progress {
     height: 100%;
     z-index: 1;
     background-color: #FE4F00;
+    cursor: pointer;
 }
 
 .radio .line {
